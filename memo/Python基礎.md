@@ -123,10 +123,22 @@ else:
 　なお、単純な有無（文字列が含まれるか）判定であれば、in演算子を使った方がいい。<br>
 
 2.文字列置換<br>
-　replace、translateともに、元の文字列を書き換えるのではなく、新しい文字列を返す。<br>
+　replace、translateともに、元の文字列を書き換えるのではなく、新しい文字列を返す。
 <br>
 　また、translateは1文字単位で変換マッピングを用意する。<br>
 
+3.datetimeの加減算<br>
+　timedeltaを使って、日付の加算、減算を行う。
+```python
+import datetime
+
+dt = datetime.datetime(2023, 3, 21, 19, 40, 35, 495)
+dt_add = dt + datetime.timedelta(days=10, hours=2)
+dt_sub = dt - datetime.timedelta(weeks=2)
+```
+3.日付の差分<br>
+　datetime、date、time同士で、「-」を使う。<br>
+　戻り値は、timedeltaオブジェクトになる。
 
 
 
