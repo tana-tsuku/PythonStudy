@@ -144,7 +144,9 @@ dt_sub = dt - datetime.timedelta(weeks=2)
 <br>
 　戻り値は、timedeltaオブジェクトになる。<br>
 <br>
-5.リストのremove<br>
+
+## コレクション<br>
+1.リストのremove<br>
 　削除対象の要素がリストに複数あった場合、最初の１つしか削除されない。<br>
 　全部、削除したい場合は、リスト内包表記を使って、新たにリストを作り直す。<br>
 
@@ -156,7 +158,7 @@ fruits.remove('みかん')
 fruits = [elem for elem in fruits if elem != 'みかん']
 ```
 <br>
-6.スライス構文の終点<br>
+2.スライス構文の終点<br>
 　終点は含まれない。<br>
 　インデクスは文字と文字の間を指している、かつ、最初の文字の左端が0になっているため。<br>
 
@@ -166,14 +168,32 @@ o = 'orange'
 print(o[2:4])
 ```
 <br>
-7.タプルとリスト
+3.タプルとリスト
 　タプルはイミュータブルで変更できない。<br>
 　さらに、リストと比べてメモリ使用量および、速度面での負荷が少ない。<br>
 　したがって、以下のように使い分けるのがいいのでは？<br>
 <br>
 　リスト：追加、変更、削除を扱う場合。<br>
 　タプル：不変で高速に処理したい場合。また、辞書のキー。<br>
+<br>
 
+## 正規表現
+1.searchとmatch<br>
+　searchは、文字列内で最初に見つかったマッチを返す。<br>
+<br>
+　一方、matchは、文字列の先頭から正規表現と一致するかを探す。<br>
+　matchでは以下は見つからない。<br>
 
+```python
+import re
+
+text = "The red fox jumps over the lazy dog."
+match = re.match(r"fox", text)
+
+if match:
+    print("Match found:", match.group())
+else:
+    print("Match not found.")
+```
 
 
