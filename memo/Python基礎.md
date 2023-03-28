@@ -196,4 +196,11 @@ else:
     print("Match not found.")
 ```
 
+2.findallとfinditer<br>
+　findallはマッチした文字列すべてを取得。戻り値はリスト。<br>
+　findと同様にMatchオブジェクトを返すのは、finditer。<br>
+　※ finditerjは正確にはMatchオブジェクトを返すイテレータ。<br>
+
+
+
 
