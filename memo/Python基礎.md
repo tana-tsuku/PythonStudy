@@ -202,5 +202,37 @@ else:
 　※ finditerjは正確にはMatchオブジェクトを返すイテレータ。<br>
 
 
+## 関数
+1.変数のスコープ<br>
+　グローバル変数とローカル変数が同名の場合、別の変数として扱われる。<br>
+<br>
 
+```python
+fruits = 'みかん'
+
+def check_var_scope():
+    fruits = 'いちご'
+    return fruits
+
+print(check_var_scope())  # いちご
+print(fruits)  # みかん
+```
+<br>
+　関数内でグローバル変数を操作する場合は、global命令を使う。<br>
+<br>
+
+```python
+fruits = 'みかん'
+
+def check_var_scope():
+    global fruits
+    fruits = 'いちご'
+    return fruits
+
+print(check_var_scope())  # いちご
+print(fruits)  # いちご
+```
+<br>
+2.ブロックスコープ<br>
+　pythonにはブロックスコープがない。<br>
 
