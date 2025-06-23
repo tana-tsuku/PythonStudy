@@ -1,7 +1,9 @@
 # 勉強用にソースコードのメモを書いたファイルです
 # 複数の機能があったとしても、機能に一貫性はありません。
 
-
+# test.txtファイルｗを読み込む
+with open("test.txt", "r", encoding="utf-8") as file:
+    content = file.readline()
 
 
 # 1．Outlookを操作するコード 新しいOutlookでは動かない
@@ -19,5 +21,4 @@ try:
 except Exception as e:
     print("失敗:", repr(e))
  """
- 
- 
+
